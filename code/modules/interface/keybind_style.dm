@@ -79,7 +79,8 @@ var/global/list/datum/keybind_style/keybind_styles = null
 	"SOUTH" = KEY_BACKWARD,
 	"WEST" = KEY_LEFT,
 	"EAST" = KEY_RIGHT,
-	"B" = KEY_POINT,
+	"P" = KEY_POINT,
+	"H" = "stop_pull",
 	"T" = "say",
 	";" = "say_over_main_radio",
 	"Y" = "say_over_channel",
@@ -88,32 +89,12 @@ var/global/list/datum/keybind_style/keybind_styles = null
 	"ALT+L" = "looc",
 	"ALT+T" = "dsay",
 	"CTRL+T" = "asay",
-	"Z" = "resist",
-	"F" = "fart",
-	"R" = "flip",
-	"CTRL+A" = "salute",
-	"CTRL+B" = "burp",
-	"CTRL+D" = "dance",
-	"CTRL+E" = "eyebrow",
-	"CTRL+F" = "fart",
-	"CTRL+G" = "gasp",
-	"CTRL+H" = "raisehand",
-	"CTRL+L" = "laugh",
-	"CTRL+N" = "nod",
-	"CTRL+Q" = "wave",
-	"CTRL+R" = "flip",
-	"CTRL+I" = "twirl",
-	"CTRL+S" = "scream",
-	"CTRL+W" = "wink",
-	"CTRL+X" = "flex",
-	"CTRL+Y" = "yawn",
-	"CTRL+Z" = "snap",
+	"B" = "resist",
 	"M" = "emote",
 	"I" = "look_n",
 	"K" = "look_s",
 	"J" = "look_w",
 	"L" = "look_e",
-	"P" = "pickup",
 	"F1" = "adminhelp",
 	"F3" = "mentorhelp",
 	"F2" = "autoscreenshot",
@@ -148,27 +129,14 @@ var/global/list/datum/keybind_style/keybind_styles = null
 /datum/keybind_style/human
 	name = "human"
 	changed_keys = list(
-		"SHIFT" = KEY_RUN,
-		"CTRL" = KEY_PULL,
-		"ALT" = KEY_EXAMINE,
-		"SPACE" = KEY_THROW,
-		"1" = "help",
-		"2" = "disarm",
-		"3" = "grab",
-		"4" = "harm",
-		"5" = "head",
-		"6" = "chest",
-		"7" = "l_arm",
-		"8" = "r_arm",
-		"9" = "l_leg",
-		"0" = "r_leg",
-		"-" = "walk",
-		"=" = "rest",
-		"V" = "equip",
-		"Q" = "drop",
-		"E" = "swaphand",
-		"C" = "attackself",
-		"DELETE" = "togglethrow"
+	"SPACE" = KEY_RUN,
+	"SHIFT" = KEY_EXAMINE,
+	"R" = KEY_THROW,
+	"E" = "equip",
+	"X" = "swaphand",
+	"Z" = "attackself",
+	"Q" = "drop",
+	"B" = "resist"
 	)
 
 /datum/keybind_style/human/arrow
@@ -224,18 +192,12 @@ var/global/list/datum/keybind_style/keybind_styles = null
 /datum/keybind_style/robot
 	name = "robot"
 	changed_keys = list(
-		"SHIFT" = KEY_BOLT,
-		"CTRL" = KEY_OPEN,
-		"ALT" = KEY_EXAMINE,
-		"SPACE" = KEY_SHOCK,
-		"1" = "module1",
-		"2" = "module2",
-		"3" = "module3",
-		"4" = "module4",
-		"B" = KEY_POINT,
-		"E" = "swaphand",
-		"C" = "attackself",
-		"Q" = "unequip"
+		"CTRL" = KEY_BOLT,
+		"SHIFT" = KEY_OPEN,
+		"ALT" = KEY_SHOCK,
+		"SPACE" = KEY_EXAMINE,
+		"X" = "swaphand",
+		"Z" = "attackself",
 	)
 
 /datum/keybind_style/robot/arrow
@@ -281,9 +243,7 @@ var/global/list/datum/keybind_style/keybind_styles = null
 /datum/keybind_style/drone
 	name = "drone"
 	changed_keys = list(
-		"B" = KEY_POINT,
-		"C" = "attackself",
-		"Q" = "unequip"
+		"Z" = "attackself",
 	)
 
 /datum/keybind_style/drone/arrow
